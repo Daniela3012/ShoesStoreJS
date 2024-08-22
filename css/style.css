@@ -1,0 +1,328 @@
+:root {
+    --colorSelection: #F3F5F7;
+    --colorSection: #E4E4E4;
+    --colorMain: #000;
+    --borderRadius: 15px;
+    --shadowContainer: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    --paddingGeneral: 20px;
+}
+body {
+    font-family: "Georama", sans-serif;
+}
+
+/*------ GENERAL ------*/
+.wrapper {
+    background-color: var(--colorSelection);
+    padding: 30px 20px;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+.selection {
+    background-color: var(--colorSelection);
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.selection, input[type="radio"], label:hover {
+    cursor: pointer;
+}
+.btn {
+    background-color: var(--colorMain);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #199A28;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+a {
+    text-decoration: none;
+    color: var(--colorMain);
+}
+button {
+    border: none;
+}
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    border: none;
+            /* Personalizar el tamaño y el fondo del input */
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/*------ HEADER ------*/
+.hero__container{
+    display: flex;
+    justify-content: space-between;
+}
+.hero__nav {
+    align-self: center;
+}
+.hero__item {
+    margin-left: 25px;
+}
+.hero__item:hover {
+    text-decoration: underline;
+}
+
+
+/*------ SECTIONS ------*/
+.sections__container .section__item:last-child {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+
+/*------ PRODUCTO ------*/
+.no--productos {
+    margin-top: var(--paddingGeneral);
+    margin-bottom: var(--paddingGeneral);
+    height: 15vh;
+    overflow: hidden;
+    border-radius: var(--borderRadius);
+    background-color: #fff;
+    text-align: center;
+    font-weight: bolder;
+    padding: var(--paddingGeneral);
+    padding-top: 50px;
+    box-shadow: var(--shadowContainer);
+    display: none;
+}
+.producto {
+    display: none;
+}
+.producto__container {
+    max-height: 650px;
+    overflow: auto;
+    background-color: #fff;
+    padding: var(--paddingGeneral);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-radius: var(--borderRadius);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1.5fr 8fr 7fr;
+    box-shadow: var(--shadowContainer);
+
+}
+.producto__figure--gallery {
+    border-radius: 7px;
+    height: 8vh;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.producto__photo-main {
+    height: 100%;
+    border-radius: var(--borderRadius);
+    overflow: hidden;
+}
+
+.producto__dataset {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.producto__stars svg {
+    fill: #049AEF;
+}
+.producto__name {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+.producto__description {
+    color: #686868;
+    margin-top: 15px;
+}
+.producto__data {
+    font-size: 0.8rem;
+    margin-top: 15px;
+    margin-bottom: 4px;
+}
+.producto__prize {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.producto__contcolor, .producto__contqunatity, .producto__contsize {
+    display: flex;
+    align-content: center;
+}
+.producto__size input[type="radio"] {
+    display: none;
+}
+.producto__quantity {
+    align-self: center;
+}
+.producto__decrease, .producto__increase {
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.producto__quantity {
+    margin: 5px 20px;
+}
+.producto__btn-carrito {
+    margin-top: auto;
+    align-self: flex-end;
+}
+.selection--active {
+    outline: 2px solid #000;
+}
+
+
+
+/*------ RESEÑAS ------*/
+.information__btn {
+    background-color: var(--colorSection);
+    padding: 13px 30px;
+    border-radius: 7px;
+    margin-right: 10px;
+}
+.informationbtn--active {
+    background-color: var(--colorMain);
+    color: #fff;
+}
+.information__box {
+    background-color: #fff;
+    margin-top: 15px;
+    box-shadow: var(--shadowContainer);
+    border-radius: var(--borderRadius);
+    padding: var(--paddingGeneral);
+    display: none;
+}
+.information__box p:first-child {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.informationbox--active {
+    display: block;
+}
+.information__author {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+    padding-top: 1PX;
+}
+.information__figure {
+    border-radius: 50%;
+    overflow: hidden;
+    flex: 0 0 10%; 
+}
+.information__text{
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+.information__date {
+    font-size: 0.8rem;
+    color: #575757;
+}
+
+
+/*------ CARRITO ------*/
+.carrito {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(77, 77, 77, 0.534);
+    display: none;
+}
+.display-active-carrito {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carrito__container {
+    overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 700px;
+    border-radius: var(--borderRadius);
+}
+.carrito__head, .carrito__conttotal {
+    background-color: var(--colorSelection);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--paddingGeneral);
+}
+.carrito__head svg:hover {
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+.carrito__name {
+    font-size: 1.5rem;
+}
+.carrito__contproducts {
+    background-color: #ffffff;
+    max-height: 67vh;
+    overflow: auto;
+    padding: 0 var(--paddingGeneral) var(--paddingGeneral) var(--paddingGeneral);
+}
+.carrito__product {
+    border-bottom: 2px solid var(--colorSelection);
+    padding: var(--paddingGeneral) 0;
+    display: grid;
+    gap: var(--paddingGeneral);
+    grid-template-columns: 1fr 4fr 2fr;
+    align-items: center;
+}
+.carrito__figure {
+    border-radius: 7px;
+    overflow: hidden;
+}
+.carrito__prodname {
+    font-weight: 700;
+}
+
+.carrito__conttotalprod svg, .carrito__totalprizeprod {
+    margin-left: auto;
+    display: block;
+    text-align: end;
+}
+.carrito__conttotalprod svg:hover {
+    color: #fff;
+    background-color: rgb(182, 19, 19);
+    padding: 5px;
+    border-radius: 50%;
+}
+.carrito__totalprizeprod {
+    margin-top: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.carrito__total-num {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
